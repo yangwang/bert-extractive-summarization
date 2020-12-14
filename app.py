@@ -11,6 +11,7 @@ from ext_sum import summarize
 def main():
     st.markdown("<h1 style='text-align: center;'>Extractive Summary✏️</h1>", unsafe_allow_html=True)
 
+    wget -O "checkpoints/distilbert_ext.pt" "https://sinclaircc-my.sharepoint.com/personal/clement_allen_sinclair_edu/_layouts/52/download.aspx?share=EQwutDLTMppLiNzRdqv2LpwB7MOE6hS48xmAGToJ2xhQAg"
     # Download model
     if not os.path.exists('checkpoints/distilbert_ext.pt'):
         download_model()
