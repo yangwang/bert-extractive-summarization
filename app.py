@@ -12,11 +12,11 @@ def main():
     st.markdown("<h1 style='text-align: center;'>Extractive Summary✏️</h1>", unsafe_allow_html=True)
 
     # Download model
-    if not os.path.exists('checkpoints/mobilebert_ext.pt'):
+    if not os.path.exists('checkpoints/distilbert_ext.pt'):
         download_model()
 
     # Load model
-    model = load_model('mobilebert')
+    model = load_model('distilbert')
 
     # Input
     input_type = st.radio("Input Type: ", ["URL", "Raw Text"])
@@ -46,14 +46,14 @@ def main():
 
 def download_model():
     nltk.download('popular')
-    url = 'https://www.googleapis.com/drive/v3/files/1umMOXoueo38zID_AKFSIOGxG9XjS5hDC?alt=media&key=AIzaSyCmo6sAQ37OK8DK4wnT94PoLx5lx-7VTDE'
+    url = 'https://sinclaircc-my.sharepoint.com/personal/clement_allen_sinclair_edu/_layouts/52/download.aspx?share=EQwutDLTMppLiNzRdqv2LpwB2eTbpWp3nXHLQJYEYYP8xw'
 
     # These are handles to two visual elements to animate.
     weights_warning, progress_bar = None, None
     try:
         weights_warning = st.warning("Downloading checkpoint...")
         progress_bar = st.progress(0)
-        with open('checkpoints/mobilebert_ext.pt', 'wb') as output_file:
+        with open('checkpoints/distilbert_ext.pt', 'wb') as output_file:
             with urllib.request.urlopen(url) as response:
                 length = int(response.info()["Content-Length"])
                 counter = 0.0
