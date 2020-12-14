@@ -10,8 +10,7 @@ from ext_sum import summarize
 
 def main():
     st.markdown("<h1 style='text-align: center;'>Extractive Summary✏️</h1>", unsafe_allow_html=True)
-
-    wget -O "checkpoints/distilbert_ext.pt" "https://sinclaircc-my.sharepoint.com/personal/clement_allen_sinclair_edu/_layouts/52/download.aspx?share=EQwutDLTMppLiNzRdqv2LpwB7MOE6hS48xmAGToJ2xhQAg"
+    
     # Download model
     if not os.path.exists('checkpoints/distilbert_ext.pt'):
         download_model()
@@ -47,7 +46,7 @@ def main():
 
 def download_model():
     nltk.download('popular')
-    url = 'https://sinclaircc-my.sharepoint.com/personal/clement_allen_sinclair_edu/_layouts/52/download.aspx?share=EQwutDLTMppLiNzRdqv2LpwB7MOE6hS48xmAGToJ2xhQAg'
+    url = 'https://www.googleapis.com/drive/v3/files/1WxU7cHECfYaU32oTM0JByTRGS5f6SYEF?alt=media&key=AIzaSyCmo6sAQ37OK8DK4wnT94PoLx5lx-7VTDE'
 
     # These are handles to two visual elements to animate.
     weights_warning, progress_bar = None, None
