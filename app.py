@@ -46,7 +46,7 @@ def main():
 
 def download_model():
     nltk.download('popular')
-    url = 'https://sinclaircc-my.sharepoint.com/personal/clement_allen_sinclair_edu/_layouts/52/download.aspx?share=EQwutDLTMppLiNzRdqv2LpwB2eTbpWp3nXHLQJYEYYP8xw'
+    url = 'https://sinclaircc-my.sharepoint.com/personal/clement_allen_sinclair_edu/_layouts/52/download.aspx?share=EQwutDLTMppLiNzRdqv2LpwB7MOE6hS48xmAGToJ2xhQAg'
 
     # These are handles to two visual elements to animate.
     weights_warning, progress_bar = None, None
